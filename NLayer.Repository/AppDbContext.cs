@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using NLayer.Core;
+﻿using System.Reflection;
+using Microsoft.EntityFrameworkCore;
+using NLayer.Core.DTOs.Model;
 
 namespace NLayer.Repository
 {
@@ -17,6 +18,15 @@ namespace NLayer.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Category>().HasKey(x => x.Id).HasName("Category");
+
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly()); //If we want to add all entities
+
+            //modelBuilder.ApplyConfiguration(new ProductConfiguration()); // If we want to add entities one by one
+
+            modelBuilder.Entity<ProductFeature>().HasData(
+                new ProductFeature() { Id = 1, Color = "Red", Height = 100, Width = 200, ProductId = 1 },
+                new ProductFeature() { Id = 2, Color = "Blue", Height = 90, Width = 20, ProductId = 2 }
+            );
 
             base.OnModelCreating(modelBuilder);
         }
