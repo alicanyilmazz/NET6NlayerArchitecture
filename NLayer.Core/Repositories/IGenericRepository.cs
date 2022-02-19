@@ -2,16 +2,16 @@
 
 namespace NLayer.Core.Repositories
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
-        Task<T> GetByIdAsync(int id);
-        IQueryable<T> GetAll(Expression<Func<T,bool>> expression);
-        IQueryable<T> Where(Expression<Func<T, bool>> expression);
-        Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
-        Task AddRangeAsync(IEnumerable<T> entities);
-        Task<T> AddAsync(T entity);
-        void Update(T entity);
-        void Remove(T entity);
-        void RemoveRange(IEnumerable<T> entities);
+        Task<TEntity> GetByIdAsync(int id);
+        IQueryable<TEntity> GetAll();
+        IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> expression);
+        Task<bool> AnyAsync(Expression<Func<TEntity, bool>> expression);
+        Task AddRangeAsync(IEnumerable<TEntity> entities);
+        Task AddAsync(TEntity entity);
+        void Update(TEntity entity);
+        void Remove(TEntity entity);
+        void RemoveRange(IEnumerable<TEntity> entities);
     }
 }
