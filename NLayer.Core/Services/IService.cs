@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace NLayer.Core.Services
 {
-    public interface IService<T> where T : class
+    public interface IService<TEntity> where TEntity : class
     {
-        Task<T> GetByIdAsync(int id);
-        IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
-        Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> expression);
-        IQueryable<T> Where(Expression<Func<T, bool>> expression);
-        Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
-        Task AddRangeAsync(IEnumerable<T> entities);
-        Task<T> AddAsync(T entity);
-        Task Update(T entity);
-        Task Remove(T entity);
-        Task RemoveRange(IEnumerable<T> entities);
+        Task<TEntity> GetByIdAsync(int id);
+        IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> expression);
+        Task<IEnumerable<TEntity>> GetAllAsync();
+        IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> expression);
+        Task<bool> AnyAsync(Expression<Func<TEntity, bool>> expression);
+        Task<IEnumerable<TEntity>> AddRangeAsync(IEnumerable<TEntity> entities);
+        Task<TEntity> AddAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);
+        Task RemoveAsync(TEntity entity);
+        Task RemoveRangeAsync(IEnumerable<TEntity> entities);
     }
 }
