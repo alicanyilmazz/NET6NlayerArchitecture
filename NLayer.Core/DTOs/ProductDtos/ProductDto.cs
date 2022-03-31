@@ -1,4 +1,4 @@
-﻿namespace NLayer.Core.DTOs
+﻿namespace NLayer.Core.DTOs.ProductDtos
 {
     public class ProductDto : BaseDto
     {
