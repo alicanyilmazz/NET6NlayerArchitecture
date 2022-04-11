@@ -7,9 +7,10 @@ using AutoMapper;
 using NLayer.Core.DTOs;
 using NLayer.Core.DTOs.CategoryDtos;
 using NLayer.Core.DTOs.CustomDtos;
-using NLayer.Core.DTOs.Model;
+using NLayer.Core.Models;
 using NLayer.Core.DTOs.ProductDtos;
 using NLayer.Core.DTOs.ProductFeatureDtos;
+
 
 namespace NLayer.Service.Mapping
 {

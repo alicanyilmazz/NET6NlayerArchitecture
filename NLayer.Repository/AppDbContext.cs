@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using NLayer.Core.DTOs.Model;
+using NLayer.Core.Models;
 
 namespace NLayer.Repository
 {

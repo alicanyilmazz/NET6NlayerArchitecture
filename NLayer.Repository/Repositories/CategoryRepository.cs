@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using NLayer.Core.DTOs.Model;
+using NLayer.Core.Models;
 using NLayer.Core.Repositories;
 
 namespace NLayer.Repository.Repositories

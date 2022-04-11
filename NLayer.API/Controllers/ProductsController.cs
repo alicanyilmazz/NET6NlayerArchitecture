@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NLayer.Core.DTOs;
-using NLayer.Core.DTOs.Model;
+using NLayer.Core.Models;
 using NLayer.Core.DTOs.ProductDtos;
 using NLayer.Core.Services;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using NLayer.Core.DTOs;
 using NLayer.Core.DTOs.CustomDtos;
-using NLayer.Core.DTOs.Model;
+using NLayer.Core.Models;
 using NLayer.Core.Repositories;
 using NLayer.Core.Services;
 using NLayer.Core.UnitOfWorks;
