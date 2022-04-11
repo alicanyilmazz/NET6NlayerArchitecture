@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NLayer.Core.DTOs;
 using NLayer.Core.DTOs.CustomDtos;
-using NLayer.Core.DTOs.Model;
+using NLayer.Core.Models;
 
 namespace NLayer.Core.Services
 {

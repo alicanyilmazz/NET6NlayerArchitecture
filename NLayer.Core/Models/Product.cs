@@ -1,4 +1,5 @@
-﻿namespace NLayer.Core.DTOs.Model
+﻿
+namespace NLayer.Core.Models
 {
     public class Product : BaseEntity
     {
